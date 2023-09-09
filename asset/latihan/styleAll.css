@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'VisbyRound';
+    src: url('../../asset/Visby-Round/OTF/VisbyRoundCF-Regular.otf');
+}
+
+body {
+    background-color: #F4F9F4;
+    font-family: 'VisbyRound' !important;
+    background-image: url("../image/bgMenulis.jpg");
+    background-attachment: fixed;
+    background-size: 115% 105%;
+    background-position: center;
+}
+
+nav {
+    background-color: #A7D7C5;
+}
+
+.navbar-brand {
+    font-size: 1rem !important;
+}
+
+.cLink:link {
+    text-decoration: none;
+    color: black;
+}
+
+.cLink:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.cLink:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #A7D7C5;
+    width: 100%;
+    height: 2rem;
+    font-size: smaller;
+}
+
+.card {
+    background-color: transparent;
+    border: none;
+}
