@@ -1,3 +1,6 @@
+var audio = document.getElementById('bgm');
+audio.volume = 0.2;
+
 const soal = document.getElementById('soal');
 modalTrue = new bootstrap.Modal(document.getElementById('modalTrue'));
 modalFalse = new bootstrap.Modal(document.getElementById('modalFalse'));
