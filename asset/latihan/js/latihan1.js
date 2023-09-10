@@ -59,8 +59,8 @@ function sound(src) {
 }
 
 function lanjut() {
-    if(soalNomor == 4){
-        soalNomor = 3;
+    if(soalNomor == 9){
+        soalNomor = 8;
     }
     soalNomor++;
     mulai();

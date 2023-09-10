@@ -35,7 +35,7 @@ function cekJawaban() {
     soalNomor++;
     if(soalNomor == listPertanyaan.length){
         modalEnd.show();
-        document.getElementById("betul").innerHTML = ('<p>' + parseFloat(betul/listPertanyaan.length)*10 + '</p>')
+        document.getElementById("betul").innerHTML = ('<p>' + parseFloat(betul/listPertanyaan.length)*100 + '</p>')
     }
     mulai();
 }
