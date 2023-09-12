@@ -2,63 +2,57 @@ let soalNomor = 0;
 
 let listPertanyaan = [
     {
-        pertanyaan: "mana kah gabungan dari 4 apel dan 2 jeruk?",
-        src: "../asset/image/latihan5/uraian6.png",
+        pertanyaan: "manakah gabungan dari 2 kelompok kue ini?",
+        src: "../asset/image/latihan5/uraian7.png", size: "100%",
         pilihan: [
-            {jawaban:true, src: "../asset/image/latihan5/gabungan6.png"},
-            {jawaban:false, src: "../asset/image/latihan5/gabungan9.png"},
-            {jawaban:false, src: "../asset/image/latihan5/gabungan7.png"},
-            {jawaban:false, src: ""}
+            {jawaban:false, src: "../asset/image/latihan5/gabungan6.png", size: "100%"},
+            {jawaban:false, src: "../asset/image/latihan5/gabungan9.png", size: "100%"},
+            {jawaban:true, src: "../asset/image/latihan5/gabungan7.png", size: "100%"}
         ]
     },
     {
-        pertanyaan: "manakah sebagian kelompok yang tepat dari gabungan kelompok itu?",
-        src: "../asset/image/latihan5/uraian9.png",
+        pertanyaan: "manakah uraian dari kelompok kue ini?",
+        src: "../asset/image/latihan5/gabungan9.png", size: "80%",
         pilihan: [
-            {jawaban:true, src: "../asset/image/latihan5/4apel.png"},
-            {jawaban:false, src: "../asset/image/latihan5/3jeruk.png"},
-            {jawaban:false, src: "../asset/image/latihan5/5apel.png"},
-            {jawaban:false, src: ""}
+            {jawaban:true, src: "../asset/image/latihan5/uraian9.png", size: "100%"},
+            {jawaban:false, src: "../asset/image/latihan5/uraian6.png", size: "100%"},
+            {jawaban:false, src: "../asset/image/latihan5/uraian7.png", size: "100%"}
         ]
     },
     {
-        pertanyaan: "mana kah gabungan dari 4 apel dan 3 jeruk?",
-        src: "../asset/image/latihan5/uraian7.png",
+        pertanyaan: "manakah gabungan dari 2 kelompok boneka ini?",
+        src: "../asset/image/latihan5/uraian12.png", size: "100%",
         pilihan: [
-            {jawaban:false, src: "../asset/image/latihan5/gabungan9.png"},
-            {jawaban:true, src: "../asset/image/latihan5/gabungan7.png"},
-            {jawaban:false, src: "../asset/image/latihan5/gabungan6.png"},
-            {jawaban:false, src: ""}
+            {jawaban:false, src: "../asset/image/latihan5/gabungan14.png", size: "80%"},
+            {jawaban:true, src: "../asset/image/latihan5/gabungan12.png", size: "80%"},
+            {jawaban:false, src: "../asset/image/latihan5/gabungan10.png", size: "80%"}
         ]
     },
     {
-        pertanyaan: "Yang mana kah gabungan dari 7 bola sepak dan 8 bola basket?",
-        src: "../asset/image/latihan5/uraian15.png",
+        pertanyaan: "manakah gabungan dari 2 kelompok boneka ini?",
+        src: "../asset/image/latihan5/uraian15.png", size: "100%",
         pilihan: [
-            {jawaban:false, src: "../asset/image/latihan5/gabungan14.png"},
-            {jawaban:true, src: "../asset/image/latihan5/gabungan15.png"},
-            {jawaban:false, src: "../asset/image/latihan5/gabungan11.png"},
-            {jawaban:false, src: ""}
+            {jawaban:false, src: "../asset/image/latihan5/gabungan14.png", size: "100%"},
+            {jawaban:true, src: "../asset/image/latihan5/gabungan15.png", size: "100%"},
+            {jawaban:false, src: "../asset/image/latihan5/gabungan12.png", size: "100%"}
         ]
     },
     {
-        pertanyaan: "sebagian kelompok mana yang tepat dari gabungan kelompok bola basket dan bola sepak?",
-        src: "../asset/image/latihan5/uraian11.png",
+        pertanyaan: "manakah uraian dari kelompok boneka ini?",
+        src: "../asset/image/latihan5/gabungan15.png", size: "60%",
         pilihan: [
-            {jawaban:false, src: "../asset/image/latihan5/8basket.png"},
-            {jawaban:false, src: "../asset/image/latihan5/5basket.png"},
-            {jawaban:true, src: "../asset/image/latihan5/6bola.png"},
-            {jawaban:false, src: ""}
+            {jawaban:false, src: "../asset/image/latihan5/uraian10.png", size: "100%"},
+            {jawaban:false, src: "../asset/image/latihan5/uraian12.png", size: "100%"},
+            {jawaban:true, src: "../asset/image/latihan5/uraian15.png", size: "100%"}
         ]
     },
     {
-        pertanyaan: "sebagian kelompok mana yang tepat dari gabungan kelompok bola basket dan bola sepak?",
-        src: "../asset/image/latihan5/uraian14.png",
+        pertanyaan: "manakah uraian dari kelompok kue ini?",
+        src: "../asset/image/latihan5/gabungan7.png", size: "100%",
         pilihan: [
-            {jawaban:false, src: "../asset/image/latihan5/6bola.png"},
-            {jawaban:true, src: "../asset/image/latihan5/8basket.png"},
-            {jawaban:false, src: "../asset/image/latihan5/5basket.png"},
-            {jawaban:false, src: ""}
+            {jawaban:false, src: "../asset/image/latihan5/uraian9.png", size: "100%"},
+            {jawaban:true, src: "../asset/image/latihan5/uraian7.png", size: "100%"},
+            {jawaban:false, src: "../asset/image/latihan5/uraian6.png", size: "100%"}
         ]
     }
 ]
