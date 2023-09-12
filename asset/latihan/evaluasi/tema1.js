@@ -25,7 +25,7 @@ function opsi4() {
 
 function cekJawaban() {
     if (listPertanyaan[soalNomor].pilihan[x].jawaban) {
-        if (soalNomor < listPertanyaan.length - 1) {
+        if (soalNomor < listPertanyaan.length) {
             betul++;
         }
     } else {
@@ -33,30 +33,27 @@ function cekJawaban() {
     }
 
     soalNomor++;
-    if(soalNomor == listPertanyaan.length){
+    if(soalNomor == 10){
         modalEnd.show();
-        document.getElementById("betul").innerHTML = ('<p>' + parseFloat(betul/listPertanyaan.length)*100 + '</p>')
+        document.getElementById("jawaban").innerHTML = ('<h5>Jawaban Betul : ' + betul + '</h5><h5>Jawaban Salah : ' + salah + '</h5>' )
     }
     mulai();
 }
 
 function mulai() {
     document.getElementById('soalGambar').src = listPertanyaan[soalNomor].src;
+    document.getElementById('soalGambar').style.width = listPertanyaan[soalNomor].size;
     document.getElementById('gambar1').src = listPertanyaan[soalNomor].pilihan[0].src;
+    document.getElementById('gambar1').style.width = listPertanyaan[soalNomor].pilihan[0].size;
     document.getElementById('gambar2').src = listPertanyaan[soalNomor].pilihan[1].src;
+    document.getElementById('gambar2').style.width = listPertanyaan[soalNomor].pilihan[1].size;
 
     if (listPertanyaan[soalNomor].pilihan[2].src == "") {
         document.getElementById('opsi3').style.display = "none";
     } else {
         document.getElementById('opsi3').style.display = "block";
         document.getElementById('gambar3').src = listPertanyaan[soalNomor].pilihan[2].src;
-    }
-
-    if (listPertanyaan[soalNomor].pilihan[3].src != "") {
-        document.getElementById('opsi4').style.display = "block";
-        document.getElementById('gambar4').src = listPertanyaan[soalNomor].pilihan[3].src;
-    } else {
-        document.getElementById('opsi4').style.display = "none";
+        document.getElementById('gambar3').style.width = listPertanyaan[soalNomor].pilihan[2].size;
     }
 
     soal.innerHTML = listPertanyaan[soalNomor].pertanyaan;
