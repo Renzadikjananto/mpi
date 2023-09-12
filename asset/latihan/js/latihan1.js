@@ -1,5 +1,5 @@
 var audio = document.getElementById('bgm');
-audio.volume = 0.2;
+audio.volume = 0.3;
 
 const soal = document.getElementById('soal');
 modalTrue = new bootstrap.Modal(document.getElementById('modalTrue'));
@@ -24,10 +24,6 @@ function opsi3() {
     cekJawaban();
 }
 
-function opsi4() {
-    x = 3;
-    cekJawaban();
-}
 
 function cekJawaban() {
     if (listPertanyaan[soalNomor].pilihan[x].jawaban) {
@@ -79,21 +75,18 @@ function kembali() {
 
 function mulai() {
     document.getElementById('soalGambar').src = listPertanyaan[soalNomor].src;
+    document.getElementById('soalGambar').style.width = listPertanyaan[soalNomor].size;
     document.getElementById('gambar1').src = listPertanyaan[soalNomor].pilihan[0].src;
+    document.getElementById('gambar1').style.width = listPertanyaan[soalNomor].pilihan[0].size;
     document.getElementById('gambar2').src = listPertanyaan[soalNomor].pilihan[1].src;
+    document.getElementById('gambar2').style.width = listPertanyaan[soalNomor].pilihan[1].size;
 
     if (listPertanyaan[soalNomor].pilihan[2].src == "") {
         document.getElementById('opsi3').style.display = "none";
     } else {
         document.getElementById('opsi3').style.display = "block";
         document.getElementById('gambar3').src = listPertanyaan[soalNomor].pilihan[2].src;
-    }
-
-    if (listPertanyaan[soalNomor].pilihan[3].src != "") {
-        document.getElementById('opsi4').style.display = "block";
-        document.getElementById('gambar4').src = listPertanyaan[soalNomor].pilihan[3].src;
-    } else {
-        document.getElementById('opsi4').style.display = "none";
+        document.getElementById('gambar3').style.width = listPertanyaan[soalNomor].pilihan[2].size;
     }
 
     soal.innerHTML = listPertanyaan[soalNomor].pertanyaan;

@@ -26,8 +26,8 @@ let listPertanyaan = [
         src: "../asset/image/latihan6/12semangka.png",
         pilihan: [
             {jawaban:false, src: "../asset/image/textBilangan/txt16.png"},
-            {jawaban:false, src: "../asset/image/textBilangan/txt14.png"},
-            {jawaban:true, src: "../asset/image/textBilangan/txt12.png"},
+            {jawaban:true, src: "../asset/image/textBilangan/txt14.png"},
+            {jawaban:false, src: "../asset/image/textBilangan/txt12.png"},
             {jawaban:false, src: ""}
         ]
     },
