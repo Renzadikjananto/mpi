@@ -1,0 +1,16 @@
+.semangka{
+    width: 8%;
+}
+
+.txtAngka{
+    width: 70%;
+}
+
+.click{
+    cursor: pointer;
+}
+
+.angkaSoal{
+    position: absolute; 
+    width: 20%;
+}

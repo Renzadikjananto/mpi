@@ -2,7 +2,7 @@ let soalNomor = 0;
 
 let listPertanyaan = [
     {
-        pertanyaan: "Buah mana yang jumlahnya sama banyak dengan buah semangka?",
+        pertanyaan: "Buah apa yang jumlahnya sama banyak dengan buah semangka?",
         src: "../asset/image/latihan3/7semangka.png", size: "35%",
         pilihan: [
             {jawaban:true, src: "../asset/image/latihan3/7apel.png", size: "100%"},
@@ -12,7 +12,7 @@ let listPertanyaan = [
         ]
     },
     {
-        pertanyaan: "Buah mana yang jumlahnya lebih sedikit dari jumlah jeruk?",
+        pertanyaan: "Buah apa yang jumlahnya lebih sedikit dari jumlah jeruk?",
         src: "../asset/image/latihan3/10jeruk.png", size: "30%",
         pilihan: [
             {jawaban:false, src: "../asset/image/latihan3/10semangka.png", size: "100%"},
