@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="../asset/animate-css/animate.css">
 
   <link rel="stylesheet" href="../asset/latihan/styleAll.css">
+  <link rel="stylesheet" href="../asset/latihan/css/latihan3.css">
 </head>
 
 <body>
@@ -34,15 +35,13 @@
 
 
   <section class="container-fluid">
-    <div class="row text-center justify-content-center">
-      <div class="col-9">
-        <img id="soalGambar" alt="soal">
-
-      </div>
-      <h3 class="card-text mt-2" id="soal"></h3>
+    <div class="row text-center ms-5">
+      <div class="col-9 text-white text-center" id="gambarSoal"></div>
+      <div class="col-2 me-5 border-3 border-primary rounded-3 align-self-center" id="txtAngka"></div>
     </div>
 
-    <div class="row justify-content-center text-center fixed-bottom" style="bottom: 15%;">
+    <div class="row justify-content-center text-center fixed-bottom" style="bottom: 10%;">
+      <div class="col-12 text-center"><h3 class="card-text mb-3" id="soal"></h3></div>
       <div class="col-3 rounded-3 opsi" id="opsi1">
         <button type="button" onclick="opsi1()" class="btn">A<br><img id="gambar1" alt="A"></button>
       </div>

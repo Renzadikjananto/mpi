@@ -1,0 +1,11 @@
+.cupcake, .donat, .boneka{
+    width: 8%;
+}
+
+.txtAngka{
+    width: 60%;
+}
+
+.click:hover{
+    cursor: pointer;
+}

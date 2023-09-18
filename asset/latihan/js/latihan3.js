@@ -1,5 +1,5 @@
 var audio = document.getElementById('bgm');
-audio.volume = 0.3;
+audio.volume = 0.07;
 
 const soal = document.getElementById('soal');
 modalTrue = new bootstrap.Modal(document.getElementById('modalTrue'));
@@ -81,9 +81,44 @@ function kembali() {
     mulai();
 }
 
+var bilangan=0;
+function hitung(x){
+    bilangan++;
+    var txtAngka = document.getElementById('txtAngka');
+    x.classList.replace('animate__bounceIn', 'animate__flash');
+    x.classList.add('shadow-sm');
+    txtAngka.innerHTML = '<img src="../../asset/image/textBilangan/txt' + bilangan + '.png" alt="1" class="txtAngka animate__animated animate__bounce">';
+    txtAngka.classList.add('border', 'bg-white');
+    Speech = new sound("../asset/speech/" + bilangan + ".mp3");
+    Speech.play();
+}
+
+function allowDrop(ev) {
+    ev.preventDefault();
+  }
+  
+  function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+  }
+  
+  function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    if (data == 'gambar1'){
+        opsi1();
+    } else if (data == 'gambar2'){
+        opsi2();
+    }else{
+        opsi3();
+    }
+
+  }
+
 function mulai() {
-    document.getElementById('soalGambar').src = listPertanyaan[soalNomor].src;
-    document.getElementById('soalGambar').style.width = listPertanyaan[soalNomor].size;
+    txtAngka.innerHTML = "";
+    txtAngka.classList.remove('border', 'bg-white');
+    bilangan = 0;
+    document.getElementById('gambarSoal').innerHTML = listPertanyaan[soalNomor].benda.repeat(listPertanyaan[soalNomor].ulangi);
     document.getElementById('gambar1').src = listPertanyaan[soalNomor].pilihan[0].src;
     document.getElementById('gambar1').style.width = listPertanyaan[soalNomor].pilihan[0].size;
     document.getElementById('gambar2').src = listPertanyaan[soalNomor].pilihan[1].src;
@@ -103,13 +138,14 @@ function mulai() {
     } 
 
     if(soalNomor >= 6){
-        pilihan1.classList.add("border", "border-3", "rounded-3");
-        pilihan2.classList.add("border", "border-3", "rounded-3");
-        pilihan3.classList.add("border", "border-3", "rounded-3");
-    }else if (soalNomor < 6){
-        pilihan1.classList.remove("border", "border-3", "rounded-3");
-        pilihan2.classList.remove("border", "border-3", "rounded-3");
-        pilihan3.classList.remove("border", "border-3", "rounded-3");
+        pilihan1.setAttribute('draggable', 'true');
+        pilihan1.setAttribute('ondragstart', 'drag(event)');
+        pilihan2.setAttribute('draggable', 'true');
+        pilihan2.setAttribute('ondragstart', 'drag(event)');
+        pilihan3.setAttribute('draggable', 'true');
+        pilihan3.setAttribute('ondragstart', 'drag(event)');
+        document.getElementById('gambarSoal').setAttribute('ondrop', 'drop(event)');
+        document.getElementById('gambarSoal').setAttribute('ondragover', 'allowDrop(event)');
     }
 
     soal.innerHTML = listPertanyaan[soalNomor].pertanyaan;

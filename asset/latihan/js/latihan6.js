@@ -1,5 +1,5 @@
 var audio = document.getElementById('bgm');
-audio.volume = 0.3;
+audio.volume = 0.07;
 
 const soal = document.getElementById('soal');
 modalTrue = new bootstrap.Modal(document.getElementById('modalTrue'));
@@ -77,9 +77,38 @@ function kembali() {
     mulai();
 }
 
+var bilangan=0;
+var bilangan1=0;
+function hitung(x){
+    bilangan++;
+    var txtAngka = document.getElementById('txtAngka');
+    x.classList.replace('animate__bounceIn', 'animate__flash');
+    x.classList.add('shadow-sm');
+    txtAngka.innerHTML = '<img src="../../asset/image/textBilangan/txt' + bilangan + '.png" alt="1" class="txtAngka animate__animated animate__bounce">';
+    txtAngka.classList.add('border', 'bg-white');
+    Speech = new sound("../asset/speech/" + bilangan + ".mp3");
+    Speech.play();
+}
+function hitung1(x){
+    bilangan1++;
+    var txtAngka = document.getElementById('txtAngka1');
+    x.classList.replace('animate__bounceIn', 'animate__flash');
+    x.classList.add('shadow-sm');
+    txtAngka.innerHTML = '<img src="../../asset/image/textBilangan/txt' + bilangan1 + '.png" alt="1" class="txtAngka animate__animated animate__bounce">';
+    txtAngka.classList.add('border', 'bg-white');
+    Speech = new sound("../asset/speech/" + bilangan1 + ".mp3");
+    Speech.play();
+}
+
 function mulai() {
-    document.getElementById('soalGambar').src = listPertanyaan[soalNomor].src;
-    document.getElementById('soalGambar').style.width = listPertanyaan[soalNomor].size;
+    txtAngka.innerHTML = "";
+    txtAngka.classList.remove('border', 'bg-white');
+    bilangan = 0;
+    txtAngka1.innerHTML = "";
+    txtAngka1.classList.remove('border', 'bg-white');
+    bilangan1 = 0;
+    document.getElementById('gambarSoal').innerHTML = listPertanyaan[soalNomor].benda.repeat(listPertanyaan[soalNomor].ulangi);
+    document.getElementById('gambarSoal1').innerHTML = listPertanyaan[soalNomor].benda1.repeat(listPertanyaan[soalNomor].ulangi1);
     document.getElementById('gambar1').src = listPertanyaan[soalNomor].pilihan[0].src;
     document.getElementById('gambar1').style.width = listPertanyaan[soalNomor].pilihan[0].size;
     document.getElementById('gambar2').src = listPertanyaan[soalNomor].pilihan[1].src;

@@ -1,0 +1,35 @@
+.semangka{
+    width: 10%;
+}
+
+.bola1{
+    width: 8%;
+}
+
+.txtAngka{
+    width: 70%;
+}
+
+.click{
+    cursor: pointer;
+}
+
+.angkaSoal{
+    position: absolute; 
+    width: 20%;
+}
+
+.penghapus{
+    rotate: 90deg;
+    width: 10%;
+}
+
+.pensil{
+    width: 4%;
+}
+
+.kereta{
+    position: absolute; 
+    width: 70%;
+    left: 15%;
+}

@@ -13,7 +13,7 @@ let listPertanyaan = [
     },
     {
         pertanyaan: "ada berapa jumlah apel?",
-        benda: '<img src="../asset/image/semangka.png" alt="1" class="click semangka my-5 mx-3" onclick="hitung(this); this.onclick=null" style="width: 10%">',
+        benda: '<img src="../asset/image/apel.png" alt="1" class="click semangka my-5 mx-3" onclick="hitung(this); this.onclick=null" style="width: 10%">',
         ulangi : 7,
         pilihan: [
             {jawaban:false, src: "../asset/image/textBilangan/txt9.png", size: "50%"},
@@ -23,7 +23,7 @@ let listPertanyaan = [
     },
     {
         pertanyaan: "ada berapa jumlah jeruk?",
-        benda: '<img src="../asset/image/semangka.png" alt="1" class="click semangka my-5 mx-3" onclick="hitung(this); this.onclick=null" style="width: 10%">',
+        benda: '<img src="../asset/image/jeruk.png" alt="1" class="click semangka my-5 mx-3" onclick="hitung(this); this.onclick=null" style="width: 10%">',
         ulangi : 6,
         pilihan: [
             {jawaban:false, src: "../asset/image/textBilangan/txt2.png", size: "50%"},
@@ -33,7 +33,7 @@ let listPertanyaan = [
     },
     {
         pertanyaan: "ada berapa jumlah bola sepak?",
-        benda: '<img src="../asset/image/semangka.png" alt="1" class="click semangka m-2 my-4" onclick="hitung(this); this.onclick=null">',
+        benda: '<img src="../asset/image/bola1.png" alt="1" class="click semangka m-2 my-4" onclick="hitung(this); this.onclick=null">',
         ulangi : 14,
         pilihan: [
             {jawaban:true, src: "../asset/image/textBilangan/txt14.png", size: "50%"},
@@ -43,7 +43,7 @@ let listPertanyaan = [
     },
     {
         pertanyaan: "ada berapa jumlah bola basket?",
-        benda: '<img src="../asset/image/semangka.png" alt="1" class="click semangka m-2 my-4" onclick="hitung(this); this.onclick=null">',
+        benda: '<img src="../asset/image/basket.png" alt="1" class="click semangka m-2 my-4" onclick="hitung(this); this.onclick=null">',
         ulangi : 16,
         pilihan: [
             {jawaban:false, src: "../asset/image/textBilangan/txt14.png", size: "50%"},
