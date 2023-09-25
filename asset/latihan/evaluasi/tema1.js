@@ -41,8 +41,7 @@ function cekJawaban() {
 }
 
 function mulai() {
-    document.getElementById('soalGambar').src = listPertanyaan[soalNomor].src;
-    document.getElementById('soalGambar').style.width = listPertanyaan[soalNomor].size;
+    document.getElementById('gambarSoal').innerHTML = listPertanyaan[soalNomor].benda.repeat(listPertanyaan[soalNomor].ulangi);
     document.getElementById('gambar1').src = listPertanyaan[soalNomor].pilihan[0].src;
     document.getElementById('gambar1').style.width = listPertanyaan[soalNomor].pilihan[0].size;
     document.getElementById('gambar2').src = listPertanyaan[soalNomor].pilihan[1].src;

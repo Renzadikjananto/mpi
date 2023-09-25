@@ -1,0 +1,51 @@
+.semangka{
+    width: 6%;
+    position: absolute;
+    rotate: -30deg;
+}
+
+.piring{
+    width: 20%;
+    position: absolute;
+    bottom: 15%;
+    z-index: -1;
+}
+
+.meja{
+    width: 50%;
+    position: absolute;
+    top: 30%;
+    z-index: -1;
+}
+
+.apel, .jeruk{
+    width: 5%;
+    position: absolute;
+}
+
+.donat{
+    width: 4%;
+    position: absolute;
+}
+
+
+.txtAngka{
+    width: 50%;
+    cursor: pointer;
+}
+
+.click{
+    cursor: pointer;
+}
+
+.angkaSoal{
+    position: absolute; 
+    width: 20%;
+}
+
+.intro{
+    position: absolute;
+    width: 70%;
+    left: 15%;
+    bottom: 7%;
+}

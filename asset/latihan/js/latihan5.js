@@ -5,6 +5,7 @@ const soal = document.getElementById('soal');
 modalTrue = new bootstrap.Modal(document.getElementById('modalTrue'));
 modalFalse = new bootstrap.Modal(document.getElementById('modalFalse'));
 modalEnd = new bootstrap.Modal(document.getElementById('modalEnd'));
+modalintro = new bootstrap.Modal(document.getElementById('modalIntro'));
 
 nadaSalah = new sound("../asset/sound_effect/good-6081.mp3");
 nadaBetul = new sound("../asset/sound_effect/success-1-6297.mp3");
@@ -125,3 +126,4 @@ function mulai() {
     soal.innerHTML = listPertanyaan[soalNomor].pertanyaan;
 }
 mulai();
+modalintro.show();
