@@ -59,8 +59,8 @@ function sound(src) {
 }
 
 function lanjut() {
-    if(soalNomor == listPertanyaan.length-1){
-        soalNomor = listPertanyaan.length-2;
+    if (soalNomor == listPertanyaan.length - 1) {
+        soalNomor = listPertanyaan.length - 2;
     }
     soalNomor++;
     mulai();
@@ -74,13 +74,14 @@ function kembali() {
     mulai();
 }
 
-var bilangan=0;
-function hitung(x){
+var bilangan = 0;
+
+function hitung(x) {
     bilangan++;
     var txtAngka = document.getElementById('txtAngka');
     x.classList.replace('animate__bounceIn', 'animate__flash');
     x.classList.add('shadow-sm');
-    txtAngka.innerHTML = '<img src="../../asset/image/textBilangan/txt' + bilangan + '.png" alt="1" class="txtAngka animate__animated animate__bounce">';
+    txtAngka.innerHTML = '<img src="../asset/image/textBilangan/txt' + bilangan + '.png" alt="1" class="txtAngka animate__animated animate__bounce">';
     txtAngka.classList.add('border', 'bg-white');
     Speech = new sound("../asset/speech/" + bilangan + ".mp3");
     Speech.play();
@@ -105,6 +106,57 @@ function mulai() {
     }
 
     soal.innerHTML = listPertanyaan[soalNomor].pertanyaan;
+}
+
+// AUDIO PADA INTRO
+intro1 = setTimeout(function () {
+    intro = new sound("../asset/speech/latihan1/intro1.mp3");
+    intro.play();
+}, 0);
+
+intro2 = setTimeout(function () {
+    intro = new sound("../asset/speech/latihan1/intro2.mp3");
+    intro.play();
+}, 7000);
+
+intro3 = setTimeout(function () {
+    intro = new sound("../asset/speech/latihan1/intro3.mp3");
+    intro.play();
+}, 15000);
+intro4 = setTimeout(function () {
+    intro = new sound("../asset/speech/latihan1/intro4.mp3");
+    intro.play();
+}, 22000);
+
+function stopIntro(){
+    intro.stop();
+    clearTimeout(intro2);
+    clearTimeout(intro3);
+    clearTimeout(intro4);
+}
+
+// AUDIO PADA AKTIVITAS
+function aktivitas(){
+    aktivitas1 = setTimeout(function () {
+        aktivitas1 = new sound("../asset/speech/latihan1/aktivitas1.mp3");
+        aktivitas1.play();
+    }, 0);
+    
+    aktivitas2 = setTimeout(function () {
+        aktivitas = new sound("../asset/speech/latihan1/aktivitas2.mp3");
+        aktivitas.play();
+    }, 7000);
+    
+    aktivitas3 = setTimeout(function () {
+        aktivitas = new sound("../asset/speech/latihan1/aktivitas3.mp3");
+        aktivitas.play();
+    }, 15000);
+}
+function stopAktivitas(){
+    aktivitas1.stop();
+    clearTimeout(aktivitas2);
+    clearTimeout(aktivitas3);
+    audio.pause();
 }
 mulai();
 modalintro.show();

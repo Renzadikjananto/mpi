@@ -45,7 +45,9 @@
     </div>
 
     <div class="row justify-content-center text-center fixed-bottom" style="bottom: 10%;">
-      <div class="col-10 text-center"><h3 class="card-text mb-1" id="soal"></h3></div>
+      <div class="col-10 text-center">
+        <h3 class="card-text mb-1" id="soal"></h3>
+      </div>
       <div class="col-3">
         <button type="button" onclick="opsi1()" class="btn">A<br><img id="gambar1" alt="A" class="opsi"></button>
       </div>
@@ -96,79 +98,128 @@
     </div>
   </div>
 
-            <div class="modal fade" id="modalEnd" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered modal-xl">
-                <div class="modal-content">
-                  <div class="modal-body text-center">
-                    <img src="../asset/image/bintang.png" alt="Benar" class="animate__animated animate__bounceIn" width="30%">
-                    <h5>Hebat semua pertanyaan sudah terjawab</h5> 
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-bs-target="#modalPengayaan" data-bs-toggle ="modal" >Lanjut</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          
-            <!-- PENGAYAAN -->
-            <div class="modal fade" id="modalPengayaan" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered modal-xl">
-                <div class="modal-content">
-                  <div class="modal-body text-center">
-                    <img src="../asset/image/salah2.png" alt="Benar" class="animate__animated animate__bounceIn" width="20%">
-                    <h4>Sekarang coba kalian pilih dua bilangan yang kalian suka.</h4>
-                    <h4 class="animate__animated animate__fadeIn animate__delay-5s">jumlahkan bilangan yang kalian pilih.</h4>
-                    <h4 class="animate__animated animate__fadeIn" style="animation-delay: 10s;">berapakah hasilnya?</h4><br>
-                    <h5 class="animate__animated animate__fadeIn" style="animation-delay: 15s;">Jika ingin mempelejari kembali mengenai materi penjumlahan silahkan klik <a href="https://youtu.be/-m4vaVraaUs?si=57EiWnUtYqrHGuqh" target="_blank" rel="noopener noreferrer">disini</a></h5>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-bs-target="#modalPengayaan2" data-bs-toggle ="modal" >Lanjut</button>
-                  </div>
-                </div>
-              </div>
-            </div>
+  <div class="modal fade" id="modalEnd" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+        <div class="modal-body text-center">
+          <img src="../asset/image/bintang.png" alt="Benar" class="animate__animated animate__bounceIn" width="30%">
+          <h5>Hebat semua pertanyaan sudah terjawab</h5>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-target="#modalAktivitas" data-bs-toggle="modal"
+            onclick="activity()"><i class="fa-solid fa-angles-right fa-xl"></i><br>Aktivitas Pembelajaran</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
-            <!-- PENGAYAAN 2-->
-            <div class="modal fade" id="modalPengayaan2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered modal-xl">
-                <div class="modal-content">
-                  <div class="modal-body text-center">
-                    <img src="../asset/image/salah1.png" alt="Benar" class="animate__animated animate__bounceIn" width="20%">
-                    <h4>Sekarang coba kalian pilih lagi dua bilangan yang berbeda.</h4>
-                    <h4 class="animate__animated animate__fadeIn animate__delay-5s">kurangkan bilangan yang lebih besar dengan yang lebih kecil.</h4>
-                    <h4 class="animate__animated animate__fadeIn" style="animation-delay: 10s;">berapakah hasilnya?</h4><br>
-                    <h5 class="animate__animated animate__fadeIn" style="animation-delay: 20s;">Atau, jika ingin mempelejari kembali mengenai materi pengurangan silahkan klik <a href="https://youtu.be/9H9cC2Q12_o?si=4Fm0CPpfqAWyy-Qb" target="_blank" rel="noopener noreferrer">disini</a></h5>
-                  </div>
-                  <div class="modal-footer">
-                    <a href="../index.html" type="button" class="btn btn-primary">Kembali</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          
-            <!-- INTRO -->
-            <div class="modal fade" id="modalIntro" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered modal-fullscreen">
-                <div class="modal-content">
-                  <div class="modal-body text-center">
-                    <h4>Sebelum mulai berlatih, coba kalian perhatikan lagi gambar berikut.</h4>
-                    <img src="../asset/image/materi1.png" alt="Benar" class="animate__animated animate__bounceIn" width="60%"><br><br>
-                    <h4 class="animate__animated animate__fadeIn">menurut kalian buah atau kue apa yang paling banyak?</h4>
-                    <h4 class="animate__animated animate__fadeInLeft" style="animation-delay: 5s;">lalu, buah atau kue apa yang paling sedikit?</h4>
-                    <h4 class="animate__animated animate__fadeInLeft" style="animation-delay: 10s;">coba kalian urutkan buah dan kue tersebut dari yang paling sedikit sampai ke yang paling banyak.</h4>
-                    <h4 class="animate__animated animate__fadeIn" style="animation-delay: 15s;">sekarang ayo kita berlatih membandingkan dan mengurutkan banyak benda</h4>
-                    <div class="row text-end">
-                      <div class="col">
-                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Mulai Berlatih</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+  <!-- AKTIVITAS 1 -->
+  <div class="modal fade" id="modalAktivitas" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+        <div class="modal-body text-center">
+          <img src="../asset/image/salah2.png" alt="Benar" class="animate__animated animate__bounceIn" width="20%">
+          <h4>Sekarang coba kalian pilih dua bilangan yang kalian suka.</h4>
+          <h4 class="animate__animated animate__fadeIn" style="animation-delay: 7s;">jumlahkan bilangan yang kalian pilih.</h4>
+          <h4 class="animate__animated animate__fadeIn" style="animation-delay: 15s;">berapakah hasilnya?</h4><br>
+          <h5 class="animate__animated animate__fadeIn" style="animation-delay: 22s;">Apakah kalian ingin menghitung lebih bnayak benda? <br> Jika ya, silahkan tonton video berikut <button type="button" class="btn btn-primary"
+            data-bs-target="#modalPengayaan" data-bs-toggle="modal" onclick="stopAktivitas()"><i
+              class="fa-brands fa-youtube"></i> Tonton</button></h5>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-target="#modalAktivitas2" data-bs-toggle="modal"
+            onclick="activity2()"><i class="fa-solid fa-angles-right fa-xl"></i><br>Aktivitas Pembelajaran</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  <script src="../asset/latihan/listSoal/listSoal6.js"></script>
-  <script src="../asset/latihan/js/latihan6.js"></script>
+  <!-- AKTIVITAS 2-->
+  <div class="modal fade" id="modalAktivitas2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+        <div class="modal-body text-center">
+          <img src="../asset/image/salah1.png" alt="Benar" class="animate__animated animate__bounceIn" width="20%">
+          <h4>Sekarang coba kalian pilih lagi dua bilangan yang berbeda.</h4>
+          <h4 class="animate__animated animate__fadeIn"  style="animation-delay: 7s;">kurangkan bilangan yang lebih besar dengan
+            yang lebih kecil.</h4>
+          <h4 class="animate__animated animate__fadeIn"  style="animation-delay: 15s;">berapakah hasilnya?</h4><br>
+          <h5 class="animate__animated animate__fadeIn" style="animation-delay: 22s;">Apakah kalian ingin menghitung lebih bnayak benda? <br> Jika ya, silahkan tonton video berikut <button type="button" class="btn btn-primary"
+            data-bs-target="#modalPengayaan2" data-bs-toggle="modal" onclick="stopAktivitas()"><i
+              class="fa-brands fa-youtube"></i> Tonton</button></h5>
+        </div>
+        <div class="modal-footer">
+          <a href="../index.html" type="button" class="btn border border-2"><i class="fa-solid fa-house fa-xl"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PENGAYAAN -->
+  <div class="modal fade" id="modalPengayaan" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-fullscreen">
+      <div class="modal-content">
+        <div class="modal-body text-center">
+          <iframe width="960" height="540" src="https://www.youtube.com/embed/-m4vaVraaUs?si=szpJxUzBZZ2MlwuJ"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+          <div class="row text-end">
+            <div class="col">
+              <a href="../index.html" type="button" class="btn border border-2"><i
+                  class="fa-solid fa-house fa-xl"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PENGAYAAN 2 -->
+  <div class="modal fade" id="modalPengayaan2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-fullscreen">
+      <div class="modal-content">
+        <div class="modal-body text-center">
+          <iframe width="960" height="540" src="https://www.youtube.com/embed/9H9cC2Q12_o?si=7D9MFBBTPg8cqlZN"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+          <div class="row text-end">
+            <div class="col">
+              <a href="../index.html" type="button" class="btn border border-2"><i
+                  class="fa-solid fa-house fa-xl"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INTRO -->
+  <div class="modal fade" id="modalIntro" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-fullscreen">
+      <div class="modal-content">
+        <div class="modal-body text-center">
+          <h4>Sebelum mulai berlatih, coba kalian perhatikan lagi gambar berikut.</h4>
+          <img src="../asset/image/materi1.png" alt="Benar" class="animate__animated animate__bounceIn"
+            width="60%"><br><br>
+          <h4 class="animate__animated animate__fadeIn" style="animation-delay: 7s;">coba kalian jumlahkan buah semangka dan buah apel.</h4>
+          <h4 class="animate__animated animate__fadeIn" style="animation-delay: 15s;">berapa hasilnya?</h4>
+          <h4 class="animate__animated animate__fadeIn" style="animation-delay: 22s;">sekarang ayo kita berlatih
+            Menjumlahkan dan Mengurangkan banyak benda</h4>
+          <div class="row text-end">
+            <div class="col">
+              <button type="button" class="btn" data-bs-dismiss="modal" onclick="stopIntro()"><i
+                class="fa-solid fa-arrow-right fa-xl"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../asset/latihan/listSoal/listSoal4.js"></script>
+  <script src="../asset/latihan/js/latihan4.js"></script>
 </body>
 
 </html>

@@ -10,10 +10,6 @@ modalintro = new bootstrap.Modal(document.getElementById('modalIntro'));
 nadaSalah = new sound("../asset/sound_effect/good-6081.mp3");
 nadaBetul = new sound("../asset/sound_effect/success-1-6297.mp3");
 
-var pilihan1 = document.getElementById("opsi1");
-var pilihan2 = document.getElementById("opsi2");
-var pilihan3 = document.getElementById("opsi3");
-
 function opsi1() {
     x = 0;
     cekJawaban();
@@ -63,12 +59,12 @@ function sound(src) {
     }
     this.stop = function () {
         this.sound.pause();
-    }
+    } 
 }
 
 function lanjut() {
-    if(soalNomor == 9){
-        soalNomor = 8;
+    if(soalNomor == 5){
+        soalNomor = 4;
     }
     soalNomor++;
     mulai();
@@ -83,43 +79,37 @@ function kembali() {
 }
 
 var bilangan=0;
+var bilangan1=0;
 function hitung(x){
     bilangan++;
     var txtAngka = document.getElementById('txtAngka');
     x.classList.replace('animate__bounceIn', 'animate__flash');
     x.classList.add('shadow-sm');
-    txtAngka.innerHTML = '<img src="../../asset/image/textBilangan/txt' + bilangan + '.png" alt="1" class="txtAngka animate__animated animate__bounce">';
+    txtAngka.innerHTML = '<img src="../asset/image/textBilangan/txt' + bilangan + '.png" alt="1" class="txtAngka animate__animated animate__bounce">';
     txtAngka.classList.add('border', 'bg-white');
     Speech = new sound("../asset/speech/" + bilangan + ".mp3");
     Speech.play();
 }
-
-function allowDrop(ev) {
-    ev.preventDefault();
-  }
-  
-  function drag(ev) {
-    ev.dataTransfer.setData("text", ev.target.id);
-  }
-  
-  function drop(ev) {
-    ev.preventDefault();
-    var data = ev.dataTransfer.getData("text");
-    if (data == 'gambar1'){
-        opsi1();
-    } else if (data == 'gambar2'){
-        opsi2();
-    }else{
-        opsi3();
-    }
-
-  }
+function hitung1(x){
+    bilangan1++;
+    var txtAngka = document.getElementById('txtAngka1');
+    x.classList.replace('animate__bounceIn', 'animate__flash');
+    x.classList.add('shadow-sm');
+    txtAngka.innerHTML = '<img src="../../asset/image/textBilangan/txt' + bilangan1 + '.png" alt="1" class="txtAngka animate__animated animate__bounce">';
+    txtAngka.classList.add('border', 'bg-white');
+    Speech = new sound("../asset/speech/" + bilangan1 + ".mp3");
+    Speech.play();
+}
 
 function mulai() {
     txtAngka.innerHTML = "";
     txtAngka.classList.remove('border', 'bg-white');
     bilangan = 0;
+    txtAngka1.innerHTML = "";
+    txtAngka1.classList.remove('border', 'bg-white');
+    bilangan1 = 0;
     document.getElementById('gambarSoal').innerHTML = listPertanyaan[soalNomor].benda.repeat(listPertanyaan[soalNomor].ulangi);
+    document.getElementById('gambarSoal1').innerHTML = listPertanyaan[soalNomor].benda1.repeat(listPertanyaan[soalNomor].ulangi1);
     document.getElementById('gambar1').src = listPertanyaan[soalNomor].pilihan[0].src;
     document.getElementById('gambar1').style.width = listPertanyaan[soalNomor].pilihan[0].size;
     document.getElementById('gambar2').src = listPertanyaan[soalNomor].pilihan[1].src;
@@ -133,23 +123,53 @@ function mulai() {
         document.getElementById('gambar3').style.width = listPertanyaan[soalNomor].pilihan[2].size;
     }
 
-    if (listPertanyaan[soalNomor].pilihan[3].src != "") {
-        document.getElementById('opsi4').style.display = "block";
-        document.getElementById('gambar4').src = listPertanyaan[soalNomor].pilihan[3].src;
-    } 
-
-    if(soalNomor >= 6){
-        pilihan1.setAttribute('draggable', 'true');
-        pilihan1.setAttribute('ondragstart', 'drag(event)');
-        pilihan2.setAttribute('draggable', 'true');
-        pilihan2.setAttribute('ondragstart', 'drag(event)');
-        pilihan3.setAttribute('draggable', 'true');
-        pilihan3.setAttribute('ondragstart', 'drag(event)');
-        document.getElementById('gambarSoal').setAttribute('ondrop', 'drop(event)');
-        document.getElementById('gambarSoal').setAttribute('ondragover', 'allowDrop(event)');
-    }
-
     soal.innerHTML = listPertanyaan[soalNomor].pertanyaan;
+}
+
+// AUDIO PADA INTRO
+intro1 = setTimeout(function () {
+    intro = new sound("../asset/speech/latihan3/intro1.mp3");
+    intro.play();
+}, 0);
+
+intro2 = setTimeout(function () {
+    intro = new sound("../asset/speech/latihan3/intro2.mp3");
+    intro.play();
+}, 7000);
+
+intro3 = setTimeout(function () {
+    intro = new sound("../asset/speech/latihan3/intro3.mp3");
+    intro.play();
+}, 15000);
+
+function stopIntro(){
+    intro.stop();
+    clearTimeout(intro2);
+    clearTimeout(intro3);
+}
+
+// AUDIO PADA AKTIVITAS
+function aktivitas(){
+    aktivitas1 = setTimeout(function () {
+        aktivitas1 = new sound("../asset/speech/latihan3/aktivitas1.mp3");
+        aktivitas1.play();
+    }, 0);
+    
+    aktivitas2 = setTimeout(function () {
+        aktivitas = new sound("../asset/speech/latihan3/aktivitas2.mp3");
+        aktivitas.play();
+    }, 7000);
+    
+    aktivitas3 = setTimeout(function () {
+        aktivitas = new sound("../asset/speech/latihan3/aktivitas3.mp3");
+        aktivitas.play();
+    }, 15000);
+}
+function stopAktivitas(){
+    aktivitas1.stop();
+    clearTimeout(aktivitas2);
+    clearTimeout(aktivitas3);
+    audio.pause();
 }
 mulai();
 modalintro.show();
