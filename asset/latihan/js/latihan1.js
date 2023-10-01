@@ -75,7 +75,7 @@ function kembali() {
 }
 
 var bilangan = 0;
-
+ 
 function hitung(x) {
     bilangan++;
     var txtAngka = document.getElementById('txtAngka');
