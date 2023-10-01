@@ -95,7 +95,7 @@ function hitung1(x){
     var txtAngka = document.getElementById('txtAngka1');
     x.classList.replace('animate__bounceIn', 'animate__flash');
     x.classList.add('shadow-sm');
-    txtAngka.innerHTML = '<img src="../../asset/image/textBilangan/txt' + bilangan1 + '.png" alt="1" class="txtAngka animate__animated animate__bounce">';
+    txtAngka.innerHTML = '<img src="../asset/image/textBilangan/txt' + bilangan1 + '.png" alt="1" class="txtAngka animate__animated animate__bounce">';
     txtAngka.classList.add('border', 'bg-white');
     Speech = new sound("../asset/speech/" + bilangan1 + ".mp3");
     Speech.play();
